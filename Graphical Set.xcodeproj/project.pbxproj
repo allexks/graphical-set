@@ -13,6 +13,10 @@
 		1A285E19229C111900D48021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A285E18229C111900D48021 /* Assets.xcassets */; };
 		1A285E1C229C111900D48021 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A285E1A229C111900D48021 /* LaunchScreen.storyboard */; };
 		1A285E27229C111A00D48021 /* Graphical_SetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E26229C111A00D48021 /* Graphical_SetTests.swift */; };
+		1A285E39229C11C100D48021 /* SetGameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E35229C11C100D48021 /* SetGameDelegate.swift */; };
+		1A285E3A229C11C100D48021 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E36229C11C100D48021 /* Card.swift */; };
+		1A285E3B229C11C100D48021 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E37229C11C100D48021 /* Deck.swift */; };
+		1A285E3C229C11C100D48021 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E38229C11C100D48021 /* SetGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		1A285E22229C111A00D48021 /* Graphical SetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Graphical SetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A285E26229C111A00D48021 /* Graphical_SetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graphical_SetTests.swift; sourceTree = "<group>"; };
 		1A285E28229C111A00D48021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A285E35229C11C100D48021 /* SetGameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGameDelegate.swift; sourceTree = "<group>"; };
+		1A285E36229C11C100D48021 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1A285E37229C11C100D48021 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		1A285E38229C11C100D48021 /* SetGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +85,12 @@
 		1A285E10229C111800D48021 /* Graphical Set */ = {
 			isa = PBXGroup;
 			children = (
+				1A285E34229C116700D48021 /* Models */,
+				1A285E33229C115E00D48021 /* Views */,
 				1A285E11229C111800D48021 /* AppDelegate.swift */,
-				1A285E13229C111800D48021 /* ViewController.swift */,
-				1A285E15229C111800D48021 /* Main.storyboard */,
+				1A285E32229C115400D48021 /* Controllers */,
+				1A285E31229C114000D48021 /* Storyboards */,
 				1A285E18229C111900D48021 /* Assets.xcassets */,
-				1A285E1A229C111900D48021 /* LaunchScreen.storyboard */,
 				1A285E1D229C111900D48021 /* Info.plist */,
 			);
 			path = "Graphical Set";
@@ -94,6 +103,41 @@
 				1A285E28229C111A00D48021 /* Info.plist */,
 			);
 			path = "Graphical SetTests";
+			sourceTree = "<group>";
+		};
+		1A285E31229C114000D48021 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1A285E15229C111800D48021 /* Main.storyboard */,
+				1A285E1A229C111900D48021 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1A285E32229C115400D48021 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A285E13229C111800D48021 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A285E33229C115E00D48021 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A285E34229C116700D48021 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A285E36229C11C100D48021 /* Card.swift */,
+				1A285E37229C11C100D48021 /* Deck.swift */,
+				1A285E38229C11C100D48021 /* SetGame.swift */,
+				1A285E35229C11C100D48021 /* SetGameDelegate.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A285E14229C111800D48021 /* ViewController.swift in Sources */,
+				1A285E39229C11C100D48021 /* SetGameDelegate.swift in Sources */,
+				1A285E3B229C11C100D48021 /* Deck.swift in Sources */,
 				1A285E12229C111800D48021 /* AppDelegate.swift in Sources */,
+				1A285E3C229C11C100D48021 /* SetGame.swift in Sources */,
+				1A285E3A229C11C100D48021 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
