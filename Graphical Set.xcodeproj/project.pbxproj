@@ -17,6 +17,7 @@
 		1A285E3A229C11C100D48021 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E36229C11C100D48021 /* Card.swift */; };
 		1A285E3B229C11C100D48021 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E37229C11C100D48021 /* Deck.swift */; };
 		1A285E3C229C11C100D48021 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E38229C11C100D48021 /* SetGame.swift */; };
+		1A285E40229C1E8100D48021 /* Int+repetitionsOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E3F229C1E8100D48021 /* Int+repetitionsOf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1A285E36229C11C100D48021 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		1A285E37229C11C100D48021 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		1A285E38229C11C100D48021 /* SetGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
+		1A285E3F229C1E8100D48021 /* Int+repetitionsOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+repetitionsOf.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		1A285E10229C111800D48021 /* Graphical Set */ = {
 			isa = PBXGroup;
 			children = (
+				1A285E3F229C1E8100D48021 /* Int+repetitionsOf.swift */,
 				1A285E34229C116700D48021 /* Models */,
 				1A285E33229C115E00D48021 /* Views */,
 				1A285E11229C111800D48021 /* AppDelegate.swift */,
@@ -241,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A285E40229C1E8100D48021 /* Int+repetitionsOf.swift in Sources */,
 				1A285E14229C111800D48021 /* ViewController.swift in Sources */,
 				1A285E39229C11C100D48021 /* SetGameDelegate.swift in Sources */,
 				1A285E3B229C11C100D48021 /* Deck.swift in Sources */,
