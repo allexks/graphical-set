@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A168281229D70950013C944 /* Double+percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A168280229D70950013C944 /* Double+percent.swift */; };
 		1A285E12229C111800D48021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E11229C111800D48021 /* AppDelegate.swift */; };
 		1A285E14229C111800D48021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E13229C111800D48021 /* ViewController.swift */; };
 		1A285E17229C111800D48021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A285E15229C111800D48021 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 		1A285E3B229C11C100D48021 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E37229C11C100D48021 /* Deck.swift */; };
 		1A285E3C229C11C100D48021 /* SetGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E38229C11C100D48021 /* SetGame.swift */; };
 		1A285E40229C1E8100D48021 /* Int+repetitionsOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E3F229C1E8100D48021 /* Int+repetitionsOf.swift */; };
+		1A285E43229C287E00D48021 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E42229C287E00D48021 /* Grid.swift */; };
+		1A285E45229C2FB300D48021 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E44229C2FB300D48021 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A168280229D70950013C944 /* Double+percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+percent.swift"; sourceTree = "<group>"; };
 		1A285E0E229C111800D48021 /* Graphical Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graphical Set.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A285E11229C111800D48021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A285E13229C111800D48021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 		1A285E37229C11C100D48021 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		1A285E38229C11C100D48021 /* SetGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGame.swift; sourceTree = "<group>"; };
 		1A285E3F229C1E8100D48021 /* Int+repetitionsOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+repetitionsOf.swift"; sourceTree = "<group>"; };
+		1A285E42229C287E00D48021 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		1A285E44229C2FB300D48021 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +94,13 @@
 			isa = PBXGroup;
 			children = (
 				1A285E3F229C1E8100D48021 /* Int+repetitionsOf.swift */,
+				1A168280229D70950013C944 /* Double+percent.swift */,
 				1A285E34229C116700D48021 /* Models */,
 				1A285E33229C115E00D48021 /* Views */,
 				1A285E11229C111800D48021 /* AppDelegate.swift */,
 				1A285E32229C115400D48021 /* Controllers */,
 				1A285E31229C114000D48021 /* Storyboards */,
+				1A285E41229C286200D48021 /* Utilities */,
 				1A285E18229C111900D48021 /* Assets.xcassets */,
 				1A285E1D229C111900D48021 /* Info.plist */,
 			);
@@ -128,6 +136,7 @@
 		1A285E33229C115E00D48021 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A285E44229C2FB300D48021 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +150,14 @@
 				1A285E35229C11C100D48021 /* SetGameDelegate.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1A285E41229C286200D48021 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1A285E42229C287E00D48021 /* Grid.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,9 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A285E40229C1E8100D48021 /* Int+repetitionsOf.swift in Sources */,
+				1A285E45229C2FB300D48021 /* CardView.swift in Sources */,
 				1A285E14229C111800D48021 /* ViewController.swift in Sources */,
 				1A285E39229C11C100D48021 /* SetGameDelegate.swift in Sources */,
+				1A285E43229C287E00D48021 /* Grid.swift in Sources */,
 				1A285E3B229C11C100D48021 /* Deck.swift in Sources */,
+				1A168281229D70950013C944 /* Double+percent.swift in Sources */,
 				1A285E12229C111800D48021 /* AppDelegate.swift in Sources */,
 				1A285E3C229C11C100D48021 /* SetGame.swift in Sources */,
 				1A285E3A229C11C100D48021 /* Card.swift in Sources */,
