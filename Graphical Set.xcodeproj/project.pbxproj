@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A168281229D70950013C944 /* Double+percent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A168280229D70950013C944 /* Double+percent.swift */; };
 		1A285E12229C111800D48021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E11229C111800D48021 /* AppDelegate.swift */; };
-		1A285E14229C111800D48021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E13229C111800D48021 /* ViewController.swift */; };
+		1A285E14229C111800D48021 /* SetGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A285E13229C111800D48021 /* SetGameViewController.swift */; };
 		1A285E17229C111800D48021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A285E15229C111800D48021 /* Main.storyboard */; };
 		1A285E19229C111900D48021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A285E18229C111900D48021 /* Assets.xcassets */; };
 		1A285E1C229C111900D48021 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A285E1A229C111900D48021 /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 		1A168280229D70950013C944 /* Double+percent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+percent.swift"; sourceTree = "<group>"; };
 		1A285E0E229C111800D48021 /* Graphical Set.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Graphical Set.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A285E11229C111800D48021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A285E13229C111800D48021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A285E13229C111800D48021 /* SetGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetGameViewController.swift; sourceTree = "<group>"; };
 		1A285E16229C111800D48021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A285E18229C111900D48021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A285E1B229C111900D48021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		1A285E32229C115400D48021 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1A285E13229C111800D48021 /* ViewController.swift */,
+				1A285E13229C111800D48021 /* SetGameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			files = (
 				1A285E40229C1E8100D48021 /* Int+repetitionsOf.swift in Sources */,
 				1A285E45229C2FB300D48021 /* CardView.swift in Sources */,
-				1A285E14229C111800D48021 /* ViewController.swift in Sources */,
+				1A285E14229C111800D48021 /* SetGameViewController.swift in Sources */,
 				1A285E39229C11C100D48021 /* SetGameDelegate.swift in Sources */,
 				1A285E43229C287E00D48021 /* Grid.swift in Sources */,
 				1A285E3B229C11C100D48021 /* Deck.swift in Sources */,

@@ -10,16 +10,31 @@ import UIKit
 
 class CardView: UIView {
   
-  private static let distanceBetweenStripes: CGFloat = 4
-  private static let padding = CGFloat(10.percent) // of the respective side of bounds
-  private static let distanceBetweenShapes = CGFloat(5.percent) // of the inner rectangle
-  private static let shapeWidth = CGFloat(25.percent) // of the inner rectangle
+  // MARK: - Properties
   
-  var card: Card? /*TEST*/= Card(number: .three, shape: .squiggle, shading: .striped, color: .purple) {
+  static let distanceBetweenStripes: CGFloat = 4
+
+  static let padding = CGFloat(10.percent) // of the respective side of bounds
+  static let distanceBetweenShapes = CGFloat(5.percent) // of the inner rectangle
+  static let shapeWidth = CGFloat(25.percent) // of the inner rectangle
+  
+  var card: Card? {
     didSet {
       setNeedsDisplay()
       setNeedsLayout()
     }
+  }
+  
+  // MARK: - Methods
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setup()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setup()
   }
   
   override func layoutSubviews() {
@@ -28,6 +43,10 @@ class CardView: UIView {
   }
   
   override func draw(_ rect: CGRect) {
+    super.draw(rect)
+    
+    layer.cornerRadius = bounds.smallerSide / 4
+    
     let drawingRectangles = generateDrawingRectangles()
     
     for rectangle in drawingRectangles {
@@ -41,15 +60,19 @@ class CardView: UIView {
     }
   }
   
+  // MARK: - Helpers
+  private func setup() {
+    backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+    clipsToBounds = true
+  }
+  
   private func generateDrawingRectangles() -> [CGRect] {
     guard let card = card else { return [] }
     
     var result: [CGRect] = []
     
-    let innerRectangle = CGRect(x: CardView.padding * bounds.width,
-                                y: CardView.padding * bounds.height,
-                                width: (1 - 2 * CardView.padding) * bounds.width,
-                                height: (1 - 2 * CardView.padding) * bounds.height)
+    let innerRectangle = bounds.insetBy(dx: CardView.padding * bounds.width,
+                                        dy: CardView.padding * bounds.height)
     
     let numberOfRects = CGFloat(card.number.rawValue)
     let rectanglesSmallerSide = CardView.shapeWidth * innerRectangle.longerSide
