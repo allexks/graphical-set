@@ -38,6 +38,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ifD-11-hCU" firstAttribute="top" secondItem="haR-Xm-6Kt" secondAttribute="bottom" id="0kT-95-K4O"/>
                             <constraint firstItem="ZiR-Xe-91x" firstAttribute="leading" secondItem="haR-Xm-6Kt" secondAttribute="trailing" id="0o8-IY-OyK">
@@ -69,8 +70,8 @@
                                 <exclude reference="Zoz-aF-hn1"/>
                                 <exclude reference="e13-UF-1Ra"/>
                                 <exclude reference="fdh-wD-RLV"/>
-                                <exclude reference="0o8-IY-OyK"/>
                                 <exclude reference="NTF-3p-mRQ"/>
+                                <exclude reference="0o8-IY-OyK"/>
                                 <exclude reference="eaW-So-DT4"/>
                             </mask>
                         </variation>
@@ -84,27 +85,29 @@
                                 <exclude reference="kEL-Bp-Gbs"/>
                                 <exclude reference="zYf-Wd-F2n"/>
                                 <exclude reference="0kT-95-K4O"/>
-                                <include reference="0o8-IY-OyK"/>
                                 <include reference="NTF-3p-mRQ"/>
                                 <exclude reference="bBV-fe-2lG"/>
+                                <include reference="0o8-IY-OyK"/>
                                 <include reference="eaW-So-DT4"/>
                                 <exclude reference="eko-Bx-UeI"/>
                                 <exclude reference="jZC-3a-qPz"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Z0F-WK-LgY" appends="YES" id="yJg-Ci-p5d"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dealThreeCardsButton" destination="ifD-11-hCU" id="eNe-xN-EqM"/>
                         <outlet property="gridView" destination="haR-Xm-6Kt" id="fnl-Yz-AuN"/>
                         <outlet property="scoreLabel" destination="ZiR-Xe-91x" id="M8z-Rw-8dr"/>
-                        <outlet property="swipeToDealGesture" destination="Jcm-Ob-Ic9" id="hcw-Xw-MQ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="down" id="Jcm-Ob-Ic9">
+                <swipeGestureRecognizer direction="down" id="Z0F-WK-LgY">
                     <connections>
-                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="G2T-fz-ymu"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="dhM-iS-DsF"/>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="O33-0N-d4W"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="raR-H8-DCx"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

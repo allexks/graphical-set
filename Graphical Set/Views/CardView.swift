@@ -25,6 +25,9 @@ class CardView: UIView {
     }
   }
   
+  var tapGestureRecognizer: UITapGestureRecognizer!
+  weak var delegate: CardViewDelegate?
+  
   // MARK: - Methods
   
   override init(frame: CGRect) {
@@ -63,7 +66,16 @@ class CardView: UIView {
   // MARK: - Helpers
   private func setup() {
     backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+    layer.borderWidth = 3.0
+    layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
     clipsToBounds = true
+    
+    tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapCard))
+    addGestureRecognizer(tapGestureRecognizer)
+  }
+  
+  @objc private func onTapCard() {
+    delegate?.onTap(self)
   }
   
   private func generateDrawingRectangles() -> [CGRect] {
