@@ -114,13 +114,16 @@ class SetGameViewController: UIViewController, SetGameDelegate, CardViewDelegate
   
   private func populateGrid() {
     let gridLen = game.availableCards.count / 3
+    
+    guard gridLen > 0 else { return }
+    
     grid.layout = traitCollection.verticalSizeClass == .compact ? .dimensions(rowCount: 3, columnCount: gridLen) : .dimensions(rowCount: gridLen, columnCount: 3)
     
     for card in game.availableCards {
       if let oldTag = tagForCard[card], grid[oldTag] == nil {
         // match was found and the grid got smaller => rearrange
         let newTag = getFirstFreeGridIndex()
-        let cardView = view.viewWithTag(oldTag)
+        let cardView = gridView.viewWithTag(oldTag)
         cardView?.tag = newTag
         tagForCard[card] = newTag
       } else if tagForCard[card] == nil {
@@ -132,7 +135,7 @@ class SetGameViewController: UIViewController, SetGameDelegate, CardViewDelegate
       let newFrame = grid[tag]!.insetBy(dx: distanceBetweenCards/2,
                                         dy: distanceBetweenCards/2)
       
-      if let cardView = view.viewWithTag(tag) {
+      if let cardView = gridView.viewWithTag(tag) {
         cardView.frame = newFrame
       } else {
         let cardView = CardView(frame: newFrame)
@@ -148,7 +151,7 @@ class SetGameViewController: UIViewController, SetGameDelegate, CardViewDelegate
     // removed cards
     let removedCards = tagForCard.keys.filter({ !game.availableCards.contains($0) })
     for card in removedCards {
-      view.viewWithTag(tagForCard[card]!)?.removeFromSuperview()
+      gridView.viewWithTag(tagForCard[card]!)?.removeFromSuperview()
       tagForCard[card] = nil
     }
     // outlines
@@ -166,7 +169,7 @@ class SetGameViewController: UIViewController, SetGameDelegate, CardViewDelegate
   
   private func setOutlineColorForCardView(for card: Card, color: UIColor = .clear) {
     if let tag = tagForCard[card],
-      let cardView = view.viewWithTag(tag) {
+      let cardView = gridView.viewWithTag(tag) {
       cardView.layer.borderColor = color.cgColor
     }
   }
